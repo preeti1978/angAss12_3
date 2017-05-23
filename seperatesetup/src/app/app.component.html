@@ -1,0 +1,10 @@
+<table border="1">
+<tr>
+<th>SNo</th><th>Description</th>
+</tr>
+<tr *ngFor ="let friend of friends">
+<!--only if pipe returns true, then display that name as well as hobby-->
+<td *ngIf="friend.name|showOnlyIfStartingWithA">{{friend.name}}</td>
+<td *ngIf="friend.name|showOnlyIfStartingWithA">{{friend.hobby}}</td>
+</tr>
+</table>
